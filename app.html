@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISL Recognition System - App</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <nav class="app-nav">
+            <div class="logo1">SpokenHands</div>
+            <div class="nav-controls">
+                <a href="index.html" class="control-button">Back</a>
+            </div>
+        </nav>
+
+        <main class="app-main">
+            <div class="video-container">
+                <video id="videoInput" autoplay playsinline></video>
+                <canvas id="canvasOutput"></canvas>
+                <button id="startBtn" class="control-button">Start Camera</button>
+            </div>
+
+            <div class="recognition-panel">
+
+                <div class="nav-controls">
+                    <select id="languageSelect" class="language-selector">
+                        <option value="en">English</option>
+                        <option value="hi">Hindi</option>
+                        <option value="kn">Kannada</option>
+                        <option value="mr">Marathi</option>
+                    </select>
+                </div>
+
+                <div class="recognition-box">
+                    <h3>Detected Gesture</h3>
+                    <div id="gestureOutput" class="output-text"></div>
+                </div>
+                
+                <div class="translation-box">
+                    <h3>Translation</h3>
+                    <div id="translationOutput" class="output-text"></div>
+                    <button id="speakBtn" class="control-button">
+                        <span class="icon">🔊</span> Speak
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <div class="status-bar">
+            <div id="statusMessage">System ready</div>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
